@@ -1,6 +1,6 @@
 {
     "name": "softbengal/larainitializer",
-    "description": "lara-initializer is a Laravel package designed to streamline the basic setup process for new projects. It provides essential configurations and tools to kickstart Laravel development quickly and efficiently.",
+    "description": "larainitializer is a Laravel package designed to streamline the basic setup process for new projects. It provides essential configurations and tools to kickstart Laravel development quickly and efficiently.",
     "type": "package",
     "license": "MIT",
     "autoload": {
@@ -8,9 +8,16 @@
             "Softbengal\\LaraInitializer\\": "src/"
         }
     },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Softbengal\\LaraInitializer\\LaraSetupFormServiceProvider"
+            ]
+        }
+    },
     "authors": [
         {
-            "name": "Soft Bengal Ltd."
+            "name": "Shishir Bhuiya"
         }
     ],
     "minimum-stability": "dev",

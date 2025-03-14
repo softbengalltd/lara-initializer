@@ -71,11 +71,6 @@ class LaraSetupFormController extends BaseController
                 return redirect()->back()->with('success', 'Sqlite database creaed');
             }
         }
-
-
-
-
-
     }
 
 }
