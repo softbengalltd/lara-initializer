@@ -1,12 +1,13 @@
 <?php
 
-namespace Softbengal\LaraInitializer;
+namespace Softbengalltd\Larainitializer;
+
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
-use Softbengal\LaraInitializer\Helpers\EnvWriter;
+use Softbengalltd\Larainitializer\Helpers\EnvWriter;
 use Illuminate\Support\Facades\Blade;
 
-class LaraSetupFormServiceProvider extends ServiceProvider
+class LarainitializerServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -35,11 +36,11 @@ class LaraSetupFormServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/config.php'=>config_path('larainitializer.php')
-        ],'larainitializer-config');
+        ],'contactform-config');
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views','larainitializer');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        Blade::component('input', \Softbengal\LaraInitializer\View\Components\Input::class);
+        Blade::component('input', \Softbengalltd\Larainitializer\View\Components\Input::class);
     }
 }

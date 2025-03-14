@@ -1,24 +1,25 @@
 <?php
 
-namespace Softbengal\LaraInitializer\Http\Controllers;
+namespace Softbengalltd\Larainitializer\Http\Controllers;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
-use Softbengal\LaraInitializer\Helpers\EnvWriter;
+use Softbengalltd\Larainitializer\Helpers\EnvWriter;
 
 
-class LaraSetupFormController extends BaseController
+
+class LarainitializerController extends BaseController
 {
     public function create($step)
     {
         switch ($step) {
             case 'basic':
-                return view('larainitializer::basic', ['locales' => EnvWriter::get_locale_array()]);
+                return view('contactform::basic', ['locales' => EnvWriter::get_locale_array()]);
                 break;
             case 'email':
-                return view('larainitializer::email');
+                return view('contactform::email');
                 break;
             case 'database':
-                return view('larainitializer::database');
+                return view('contactform::database');
                 break;
         }
     }
@@ -71,6 +72,11 @@ class LaraSetupFormController extends BaseController
                 return redirect()->back()->with('success', 'Sqlite database creaed');
             }
         }
+
+
+
+
+
     }
 
 }

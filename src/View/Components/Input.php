@@ -1,6 +1,6 @@
 <?php
 
-namespace EngrShishir\Contactform\View\Components;
+namespace Softbengalltd\Larainitializer\View\Components;
 
 use Illuminate\View\Component;
 

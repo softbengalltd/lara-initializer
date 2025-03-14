@@ -1,5 +1,5 @@
 <?php
-namespace EngrShishir\Contactform\Models;
+namespace Softbengalltd\Larainitializer\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
