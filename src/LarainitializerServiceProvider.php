@@ -36,7 +36,7 @@ class LarainitializerServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/config.php'=>config_path('larainitializer.php')
-        ],'contactform-config');
+        ],'larainitializer-config');
 
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views','larainitializer');

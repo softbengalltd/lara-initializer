@@ -13,13 +13,13 @@ class LarainitializerController extends BaseController
     {
         switch ($step) {
             case 'basic':
-                return view('contactform::basic', ['locales' => EnvWriter::get_locale_array()]);
+                return view('larainitializer::basic', ['locales' => EnvWriter::get_locale_array()]);
                 break;
             case 'email':
-                return view('contactform::email');
+                return view('larainitializer::email');
                 break;
             case 'database':
-                return view('contactform::database');
+                return view('larainitializer::database');
                 break;
         }
     }
