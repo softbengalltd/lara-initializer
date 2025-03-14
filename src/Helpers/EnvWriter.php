@@ -1,5 +1,5 @@
 <?php
-namespace EngrShishir\Contactform\Helpers;
+namespace Softbengal\LaraInitializer\Helpers;
 
 class EnvWriter
 {
