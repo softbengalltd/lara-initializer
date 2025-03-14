@@ -4,7 +4,7 @@
 
 @section('content')
     @if (session('success') || session('error'))
-        @include('contactform::partials.alert', [
+        @include('larainitializer::partials.alert', [
             'type' => session('success') ? 'success' : 'danger',
             'message' => session('success') ? session('success') : session('error'),
         ])
