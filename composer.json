@@ -11,7 +11,7 @@
     "extra":{
         "laravel":{
             "providers":[
-                "Softbengalltd\\Larainitializer\\ContactFormServiceProvider"
+                "Softbengalltd\\Larainitializer\\LarainitializerServiceProvider"
             ]
         }
     },
