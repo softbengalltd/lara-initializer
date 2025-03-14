@@ -25,6 +25,6 @@ class Input extends Component
 
     public function render()
     {
-        return view('contactform::components.input');
+        return view('larainitializer::components.input');
     }
 }
