@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Softbengal\LaraInitializer\Http\Controllers\LaraSetupFormController;
+use EngrShishir\Contactform\Http\Controllers\ContactFormController;
 
 Route::middleware(['guest','web'])->group(function(){
-    Route::get('/setup/{step}', [LaraSetupFormController::class, 'create'])->name('squartup.setup.form');
-    Route::post('/setup/submit',[LaraSetupFormController::class,'store'])->name('squartup.setup.submit');
+    Route::get('/setup/{step}', [ContactFormController::class, 'create'])->name('squartup.setup.form');
+    Route::post('/setup/submit',[ContactFormController::class,'store'])->name('squartup.setup.submit');
 });

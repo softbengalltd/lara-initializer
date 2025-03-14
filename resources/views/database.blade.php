@@ -1,14 +1,16 @@
-@extends('larainitializer::layouts.app')
+@extends('contactform::layouts.app')
 
 @section('title', 'Database Setup')
 
 @section('content')
     @if (session('success') || session('error'))
-        @include('larainitializer::partials.alert', [
-            'type' => session('success') ? 'success' : 'danger',
+        @include('contactform::partials.alert', [
+            'type' => session('success') ? 'success': 'danger',
             'message' => session('success') ? session('success') : session('error'),
         ])
     @endif
+
+
     <form method="POST" action="{{ route('squartup.setup.submit') }}">
         @csrf
         <input type="hidden" name="step" value="database">

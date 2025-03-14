@@ -1,5 +1,5 @@
 <?php
-namespace Softbengal\LaraInitializer\Helpers;
+namespace EngrShishir\Contactform\Helpers;
 
 class EnvWriter
 {
@@ -27,6 +27,9 @@ class EnvWriter
             // Write the contents back to the .env file
             file_put_contents($path, $contents);
         }
+
+        // Clean extra newlines in the .env file
+        // self::cleanEnvFile($path);
     }
 
     public static function removeEnvValue($key)
@@ -44,6 +47,28 @@ class EnvWriter
             // Write the modified contents back to the .env file
             file_put_contents($path, $contents);
         }
+
+        // Clean extra newlines in the .env file
+        // self::cleanEnvFile($path);
+    }
+
+    public static function cleanEnvFile($filePath)
+    {
+        // Check if the file exists
+        if (!file_exists($filePath)) {
+            return "File not found!";
+        }
+
+        // Read the contents of the .env file
+        $content = file_get_contents($filePath);
+
+        // Replace any sequence of more than two newlines with exactly two newlines
+        $cleanedContent = preg_replace('/\n{3,}/', "\n\n", $content);
+
+        // Write the cleaned content back to the .env file
+        file_put_contents($filePath, $cleanedContent);
+
+        return "Extra newlines removed successfully!";
     }
 
     public static function get_locale_array()

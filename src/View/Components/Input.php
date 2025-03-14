@@ -1,6 +1,6 @@
 <?php
 
-namespace Softbengal\LaraInitializer\View\Components;
+namespace EngrShishir\Contactform\View\Components;
 
 use Illuminate\View\Component;
 
@@ -25,6 +25,6 @@ class Input extends Component
 
     public function render()
     {
-        return view('larainitializer::components.input');
+        return view('contactform::components.input');
     }
 }

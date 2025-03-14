@@ -1,18 +1,22 @@
-@extends('contactform::layouts.app')
+@extends('app')
+
+@section('title', 'Home Page')
 
 @section('content')
     <form method="POST" action="{{ route('squartup.setup.submit') }}">
         @csrf
         <input type="hidden" name="step" value="basic">
         <div class="card-body">
-            <x-input 
-                label="App Name" 
-                name="app_name" 
-                type="text" 
-                placeholder="Enter app name"
-                value="{{ old('app_name') ?? getenv('APP_NAME') }}"
-                error="{{ $errors->first('app_name') }}"
-            />
+            <div class="form-group">
+                <label>
+                    App Name
+                    @if ($errors->has('app_name'))
+                        <span class="text-danger">required*</span>
+                    @endif
+                </label>
+                <input type="text" class="form-control" name="app_name" placeholder="Enter app name"
+                    value="{{ old('app_name') ?? (getenv('APP_NAME') ?? '') }}">
+            </div>
             <div class="form-group">
                 <label>
                     Chose App Locale

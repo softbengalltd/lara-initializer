@@ -1,23 +1,23 @@
 {
-    "name": "softbengal/larainitializer",
-    "description": "larainitializer is a Laravel package designed to streamline the basic setup process for new projects. It provides essential configurations and tools to kickstart Laravel development quickly and efficiently.",
+    "name": "engrshishir/contactform",
+    "description": "laravel contact form package",
     "type": "package",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Softbengal\\LaraInitializer\\": "src/"
+            "EngrShishir\\Contactform\\": "src/"
         }
     },
     "extra":{
         "laravel":{
             "providers":[
-                "Softbengal\\LaraInitializer\\LaraSetupFormServiceProvider"
+                "EngrShishir\\Contactform\\ContactFormServiceProvider"
             ]
         }
     },
     "authors": [
         {
-            "name": "Shishir Bhuiya"
+            "name": "EngrShishir"
         }
     ],
     "minimum-stability": "dev",

@@ -1,4 +1,4 @@
-@extends('larainitializer::layouts.app')
+@extends('contactform::layouts.app')
 
 @section('title', 'Email Setup')
 
